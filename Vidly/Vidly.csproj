@@ -46,6 +46,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=4.1.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.1.0\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -158,11 +161,16 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\MappingProfile.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\API\CustomersController.cs" />
+    <Compile Include="Controllers\API\MoviesController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MovieController.cs" />
+    <Compile Include="DTO\CustomerDto.cs" />
+    <Compile Include="DTO\MovieDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -210,13 +218,13 @@
     <Compile Include="Migrations\201803151057008_AddGenreToDatabase.Designer.cs">
       <DependentUpon>201803151057008_AddGenreToDatabase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201803151059076_AddValueToGenreAndMovie.cs" />
-    <Compile Include="Migrations\201803151059076_AddValueToGenreAndMovie.Designer.cs">
-      <DependentUpon>201803151059076_AddValueToGenreAndMovie.cs</DependentUpon>
+    <Compile Include="Migrations\201803180023276_AddValidationToMovieandCustomer.cs" />
+    <Compile Include="Migrations\201803180023276_AddValidationToMovieandCustomer.Designer.cs">
+      <DependentUpon>201803180023276_AddValidationToMovieandCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201803151144485_AddValueToMovie.cs" />
-    <Compile Include="Migrations\201803151144485_AddValueToMovie.Designer.cs">
-      <DependentUpon>201803151144485_AddValueToMovie.cs</DependentUpon>
+    <Compile Include="Migrations\201803180042532_AddValidationToStock.cs" />
+    <Compile Include="Migrations\201803180042532_AddValidationToStock.Designer.cs">
+      <DependentUpon>201803180042532_AddValidationToStock.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -328,11 +336,11 @@
     <EmbeddedResource Include="Migrations\201803151057008_AddGenreToDatabase.resx">
       <DependentUpon>201803151057008_AddGenreToDatabase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803151059076_AddValueToGenreAndMovie.resx">
-      <DependentUpon>201803151059076_AddValueToGenreAndMovie.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201803180023276_AddValidationToMovieandCustomer.resx">
+      <DependentUpon>201803180023276_AddValidationToMovieandCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803151144485_AddValueToMovie.resx">
-      <DependentUpon>201803151144485_AddValueToMovie.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201803180042532_AddValidationToStock.resx">
+      <DependentUpon>201803180042532_AddValidationToStock.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
