@@ -14,7 +14,7 @@ namespace Vidly.DTO
 
 
 
-
+        public MemberShipTypeDto MemberShipType { get; set; }
 
         public byte MemberShipTypeId { get; set; }
 

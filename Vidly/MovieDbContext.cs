@@ -18,6 +18,8 @@ namespace Vidly
         // public virtual DbSet<Tag> Tags { get; set; }
         public virtual DbSet<Genre> Genres { get; set; }
 
+        public virtual DbSet<Rental> Rentals { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
 

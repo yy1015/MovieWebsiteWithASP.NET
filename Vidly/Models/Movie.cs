@@ -14,12 +14,17 @@ namespace Vidly.Models
 
         public DateTime AddedDate { get; set; }
         [Required]
+        [Display(Name = "Number in Stock")]
         [Range(0, 12)]
-        public int Stock { get; set; }
+        public int NumberInStock { get; set; }
 
         public Genre Genre { get; set; }
         [Display(Name = "Genre Type")]
         public int GenreId { get; set; }
+
+
+
+        public Byte NumberAvailable { get; set; }
     }
 
 

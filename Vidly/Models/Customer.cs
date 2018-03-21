@@ -16,7 +16,6 @@ namespace Vidly.Models
         public MemberShipType MemberShipType { get; set; }
 
         [Display(Name = "Membershipy Type")]
-
         public byte MemberShipTypeId { get; set; }
 
         [Display(Name = "Date of Birth")]
